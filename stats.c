@@ -29,7 +29,11 @@
 
 
 
-// Function to swap two elements in an array
+/* Function to swap two elements in an array
+ * Input : The input for the swap function is two pointers to unsigned char variables.
+ * Output : The output of the swap function is the values of the variables pointed to 
+ * by 'a' and 'b' after the swap operation is performed.
+ */
 void swap(unsigned char *a, unsigned char *b)
 {
      unsigned char temp = *a;
@@ -37,7 +41,11 @@ void swap(unsigned char *a, unsigned char *b)
       *b = temp;
 }
 
-// Function to sort an array in descending order using the bubble sort algorithm
+/* Function to sort an array in descending order using the bubble sort algorithm
+ * Input : The input for the function sort_array is an array of unsigned characters (unsigned char arr[]) 
+ * and an integer representing the size of the array (int size).
+ * Output : The function sorts this array in descending order using the bubble sort algorithm.
+ */ 
 void sort_array(unsigned char arr[], int size)
 {
        	for (int i = zero; i < size -one; i++)
@@ -52,7 +60,11 @@ void sort_array(unsigned char arr[], int size)
 	}
 }
 
-// Function to find the maximum value in the array
+/*Function to find the maximum value in the array
+ * Input : const unsigned char *data is the input data on which maximum value is found 
+ * and int size represents the size of the array.
+ * Output  : The output is to find the maximum value in the input array and return it as an unsigned char.
+ */
 unsigned char find_maximum(const unsigned char *data, int size) 
 {
      unsigned char max = data[zero];
@@ -66,7 +78,12 @@ unsigned char find_maximum(const unsigned char *data, int size)
      return max;
 }
 
-// Function to find the minimum value in the array
+/* Function to find the minimum value in the array
+ * Input : const unsigned char *data is the input data on which minimum value is found 
+ * and int size represents the size of the array.
+ * Output : The output of the function is an unsigned char value, 
+ * which is the minimum value found within the array.
+ */ 
 unsigned char find_minimum(const unsigned char *data, int size)
 {
      unsigned char min = data[zero];
@@ -80,7 +97,12 @@ unsigned char find_minimum(const unsigned char *data, int size)
      return min;
 }
 
-// Function to find the mean of the array
+/* Function to find the mean of the array
+ * Input : const unsigned char *data is pointer to an array of unsigned characters 
+ * and int size represents the size of the array.
+ * Output : The output of the function is an integer representing the mean of the elements 
+ * in the data array.
+ */
 int find_mean(const unsigned char *data, int size)
 {
      int sum = zero;
@@ -91,7 +113,13 @@ int find_mean(const unsigned char *data, int size)
 	return sum / size;
 }
 
-// Function to find the median of the array
+/* Function to find the median of the array
+ * Input : The input for the function is an array of unsigned characters (unsigned char arr[]),
+ * const unsigned char *data is pointer to an array of unsigned characters,
+ * and int size represents the size of the array. 
+ * Output : The function calculates and returns the median of the elements in the arr array.
+ * The median is the middle value of a sorted list. 
+ */
 int find_median(unsigned char arr[], const unsigned char *data, int size) 
 {
        	sort_array(arr, size);
@@ -108,7 +136,12 @@ int find_median(unsigned char arr[], const unsigned char *data, int size)
         }
 }
 
-// Print the results
+/* Print the ststistical calcualtions done on the array
+ * Input : The input for the function is an array of unsigned characters (unsigned char arr[]),
+ * const unsigned char *data is pointer to an array of unsigned characters,
+ * and int size represents the size of the array. 
+ * Output : The function calculates and prints maximum, minimum, mean and median.
+ */
 int print_statistics(unsigned char arr[], unsigned char *data, int size)
 {
 	//Find the maximum, minimum, mean and median
@@ -123,7 +156,11 @@ int print_statistics(unsigned char arr[], unsigned char *data, int size)
  	printf("Median: %d\n", median);
 }  
 
-//Print original unsorted array
+/*Print original unsorted array
+ * Input : A pointer to the first element of an array of unsigned characters
+ * and int size represents the size of the array.
+ * Output : The function will print the elements of the array in an unsorted order.
+ */ 
 void print_array(const unsigned char *data, int size)
 {	
 	printf("Unsorted Data :\n");
@@ -139,7 +176,7 @@ int main()
 {
 	int size;
 	        
-	// Input: You can change this array to your data
+	// Input array 
 	unsigned char data[] = {34,201,190,154,8,194,2,6,
 		  		  114,88,45,76,123,87,25,23,
 				  200,122,150,90,92,87,177,244,
@@ -155,7 +192,9 @@ int main()
 	//Sort the data in decending order
 	sort_array(data, size);
 
-	// Print the sorted array
+	/* Print the sorted array
+	 * Output : The sorted data is printed in ascending order.
+	 */
         printf("Sorted Data:\n");
 
 	for (int i = zero; i < size; i++)
